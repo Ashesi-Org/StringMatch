@@ -21,7 +21,7 @@ def interactive_mode():
 
 def file_mode():
     with open("input.txt", "r") as file:
-        num_test_cases = int(file.readline())
+        num_test_cases = int(file.readline().strip())
         with open("output.txt", "w") as output_file:
             for _ in range(num_test_cases):
                 text = file.readline().strip()
@@ -42,3 +42,4 @@ if __name__ == "__main__":
     else:
         print("Invalid mode. Please use 'interactive' or 'file'.")
         sys.exit(1)
+
